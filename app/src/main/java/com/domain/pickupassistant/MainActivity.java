@@ -2,6 +2,7 @@ package com.domain.pickupassistant;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Spinner;
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Spinner spinnerLesson;
     private TextView textViewLessonDescription;
+
 
 
     @Override
@@ -31,5 +33,15 @@ public class MainActivity extends AppCompatActivity {
     private String getDescriptionByPosition(int position) {
         String[] descriptions = getResources().getStringArray(R.array.description_lesson); //получаем массив строк со всеми описаниями
         return descriptions[position]; //возвращаем элемент массива совпадающего с выбранного элемента в спинере
+    }
+
+
+    public void getPartner(View view) {
+         String messageToPartner = getResources().getString(R.string.send_message_partner);
+         Intent intentToApp = new Intent(Intent.ACTION_SEND);
+         intentToApp.setType("text/plain");
+         intentToApp.putExtra(Intent.EXTRA_TEXT, messageToPartner);
+         startActivity(intentToApp);
+
     }
 }

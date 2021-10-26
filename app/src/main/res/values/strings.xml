@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Pickup Assistant</string>
     <string name="button_get_lesson">Выбрать урок</string>
-    
+    <string name="button_get_partner">Вызвать напарника</string>
+    <string name="send_message_partner">Я вышел в поле!</string>
+
     <string-array name="lessons">
         <item>1. Какого парня хотят девушки?</item>
         <item>2. Оценка Твоей Ситуации</item>

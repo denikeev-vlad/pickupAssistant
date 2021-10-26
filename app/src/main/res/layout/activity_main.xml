@@ -8,6 +8,22 @@
     tools:context=".MainActivity">
 
 
+    <Button
+        android:id="@+id/buttonGetLesson3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="116dp"
+        android:backgroundTint="#F44336"
+        android:onClick="showDescription"
+        android:rotation="0"
+        android:text="@string/button_get_lesson"
+        android:textColor="#212121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerLesson" />
+
     <Spinner
         android:id="@+id/spinnerLesson"
         android:layout_width="0dp"
@@ -24,30 +40,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonGetLesson"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FF5722"
-        android:rotation="0"
-        android:text="@string/button_get_lesson"
-        android:layout_margin="8dp"
-        android:onClick="showDescription"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerLesson" />
-
     <TextView
         android:id="@+id/textViewLessonDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGetLesson" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonGetPartner" />
 
+    <Button
+        android:id="@+id/buttonGetPartner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#F44336"
+        android:onClick="getPartner"
+        android:text="@string/button_get_partner"
+        android:textColor="#212121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGetLesson3"
+        tools:ignore="MissingConstraints,OnClick" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
